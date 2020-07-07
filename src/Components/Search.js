@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'; //BOOSTRAP
 
 class Search extends React.Component {
 
@@ -14,7 +15,9 @@ class Search extends React.Component {
 
     render() {
         return (
-            <input type="text" onChange={this.onChangeEvent} />
+            <input className="form-control col-12" type="text" placeholder="Book Name" onChange={this.onChangeEvent} />
+
+
         );
 
     }

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 
 class PanelAdd extends React.Component {
@@ -38,22 +40,28 @@ class PanelAdd extends React.Component {
 
     render() {
         return (
-            <div className="new-item-panel-container" >
-                <div className="new-item-panel">
+            <Modal.Dialog>
+                <Modal.Header >
+                    <Modal.Title>Book Form</Modal.Title>
+                    <button className="button btn-normal float-left" onClick={this.props.onCancel} >X</button>
+
+                </Modal.Header>
+
+                <Modal.Body>
                     <form onSubmit={this.onSubmit} >
                         <p>
-                            <label>Título del libro</label><br />
-                            <input type="text" name="title" className="input" onChange={this.onChangeTitle} />
+                            <label>Book Title</label><br />
+                            <input type="text" name="title" className="form-control" onChange={this.onChangeTitle} />
                         </p>
 
                         <p>
-                            <label>Nombre de imagen</label><br />
-                            <input type="text" name="image" className="input" onChange={this.onChangeImage} />
+                            <label>Book Image</label><br />
+                            <input type="text" name="image" className="form-control" onChange={this.onChangeImage} />
                         </p>
 
                         <p>
-                            <label>Calificación</label><br />
-                            <select onChange={this.onChangeRating}>
+                            <label>Qualification</label><br />
+                            <select className="custom-select col-2" onChange={this.onChangeRating}>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -61,11 +69,13 @@ class PanelAdd extends React.Component {
                                 <option value="5">5</option>
                             </select>
                         </p>
-                        <input type="submit" className="button btn-blue" value="Registrar libro" />
-                        <button className="button btn-normal" onClick={this.props.onCancel} >Cancelar</button>
+                        <input type="submit" className="button btn-blue float-right w-100" value="Register" />
+
                     </form>
-                </div>
-            </div>
+                </Modal.Body>
+
+            </Modal.Dialog>
+
         );
     }
 
