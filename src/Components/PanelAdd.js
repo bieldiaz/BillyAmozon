@@ -14,6 +14,7 @@ class PanelAdd extends React.Component {
             image: '',
             rating: 1
         };
+
     }
 
     onChangeTitle = (e) => {
@@ -37,6 +38,8 @@ class PanelAdd extends React.Component {
         this.props.onadd({ title: title, image: image, rating: rating });
         this.props.onCancel();
     }
+
+
 
     render() {
         return (

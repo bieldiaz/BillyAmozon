@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import Search from './Search';
 import PanelAdd from './PanelAdd';
-
 import '../css/Menu.scss';
 
 import 'bootstrap/dist/css/bootstrap.min.css'; //BOOSTRAP
-
 
 class Menu extends React.Component {
 
@@ -25,14 +23,22 @@ class Menu extends React.Component {
         this.setState({ newItemPanel: false });
     }
 
+
+
+
     render() {
         return (
             <div className="container-fluid mb-5 mt-5 ">
 
                 <div className="row justify-content-center ">
-                    <div className="logo mr-5">
-                        <h3>{this.props.title}</h3>
-                    </div>
+
+
+                    <h1 class="ml7 mr-5">
+                        <span class="text-wrapper">
+                            <span class="letters">{this.props.title}</span>
+                        </span>
+                    </h1>
+
                     <div className="search">
                         <Search onsearch={this.props.onsearch} />
                     </div>
@@ -45,6 +51,7 @@ class Menu extends React.Component {
                 </div>
 
                 {
+
                     (this.state.newItemPanel) ?
                         <PanelAdd onCancel={this.onCancel} onadd={this.props.onadd} />
                         :

@@ -83,6 +83,7 @@ class App extends React.Component {
 
   render() {
     return (
+
       <div className="app">
         <Menu title="Billy Store" onsearch={this.onSearch} onadd={this.addItem} />
         <List className="list" items={this.state.copyBooks} onremove={this.onremove} onupdaterating={this.updateRating} />

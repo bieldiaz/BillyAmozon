@@ -115,3 +115,24 @@ button {
   line-height: 1;
   padding: 0.6em 2em;
 }
+
+
+.ml7 {
+  position: relative;
+  font-weight: 900;
+  font-size: 1.7em;
+}
+.ml7 .text-wrapper {
+  position: relative;
+  display: inline-block;
+
+  padding-right: 0.05em;
+  
+  overflow: hidden;
+}
+
+.ml7 .letter {
+  transform-origin: 0 100%;
+  display: inline-block;
+  line-height: 1em;
+}

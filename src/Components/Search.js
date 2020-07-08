@@ -15,6 +15,7 @@ class Search extends React.Component {
 
     render() {
         return (
+
             <input className="form-control col-12" type="text" placeholder="Book Name" onChange={this.onChangeEvent} />
 
 
